@@ -31,6 +31,7 @@ There was no language constraint so I used nodejs for fast development.
 2) `` cd Guitar-Inventory-App-Nodejs ``
 3) `` npm install ``
 4) `` node server ``
+5) Open http://localhost:8001/api/v1 in your browser.
 
 
 `` P.S. Comparatively easier problem than expected. ``
