@@ -36,7 +36,6 @@ var router = express.Router();
 /*------------------------------------------------------
 *  This is router middleware,invoked everytime
 *  we hit url /api and anything after /api
-*  like /api/getInventory , /api/addInventory
 --------------------------------------------------------*/
 router.use(function(req, res, next) {
     console.log(req.method, req.url);
