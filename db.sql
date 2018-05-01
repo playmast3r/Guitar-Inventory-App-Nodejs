@@ -57,3 +57,28 @@ LOCK TABLES `ProductList` WRITE;
 INSERT INTO `ProductList` VALUES (1,'Yamaha','YZ-200','electric',4,15000),(2,'Yamaha','YZ-500','electric',5,22000),(3,'Kanda Shokai','Gakki','acoustic',4,18000),(4,'Maybach','Maybach-1','acoustic',4,33000),(5,'JOSHUA GUITARS','Rainsong BI-WS1000N2','acoustic',4,45000);
 /*!40000 ALTER TABLE `ProductList` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Create statement for SP `fetchSalesByMonth`
+--
+
+DROP procedure IF EXISTS `fetchSalesByMonth`;
+
+DELIMITER $$
+CREATE DEFINER=`test`@`%` PROCEDURE `fetchSalesByMonth`(
+IN month VARCHAR(8)
+)
+BEGIN
+	SELECT 
+    *
+	FROM
+		Inventory,
+		ProductList
+	WHERE
+		Inventory.pId = ProductList.pId
+		AND SUBSTRING(Inventory.sellDate, 1, 7) = month;
+END$$
+
+DELIMITER ;
+
+
