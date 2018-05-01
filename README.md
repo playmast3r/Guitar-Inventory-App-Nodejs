@@ -24,7 +24,13 @@ There was no language constraint so I used nodejs for fast development.
 
 1) I first designed the database, time taken ~10 mins.
 2) Then I wrote db function to return list of guitars sold by the owner in month passed in params, time taken ~30 mins.
-3) Took boilerplate CRUD code for nodejs, modified it to my requirement, testing, bugfix, etc, time taken ~1 hr.
+3) Took boilerplate CRUD code for nodejs, modified it to my requirement, testing, bugfix, etc, time taken ~1 hr. Project is developed in Restful way. So same endpoint will cater everything depending on protocol used. 
+
+## Steps: 
+1) Git clone the repo or download zip.
+2) `` cd Guitar-Inventory-App-Nodejs ``
+3) `` npm install ``
+4) `` node server ``
 
 
 `` P.S. Comparatively easier problem than expected. ``
