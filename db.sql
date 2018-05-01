@@ -1,0 +1,8 @@
+CREATE TABLE `ProductList` (
+  `pId` INT NOT NULL AUTO_INCREMENT,
+  `brand` VARCHAR(150) NOT NULL,
+  `model` VARCHAR(150) NOT NULL,
+  `type` VARCHAR(50) NOT NULL,
+  `numOfString` MEDIUMINT(11) NULL,
+  `price` FLOAT NOT NULL,
+  PRIMARY KEY (`pId`));
